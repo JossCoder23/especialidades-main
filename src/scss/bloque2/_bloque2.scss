@@ -1,5 +1,182 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 .bloque2 {
-    background-color: gray;
-    height: 80rem;
+    background-color: v.$cuarto;  
+    height: auto;
     width: 100%;
+}
+
+.bloque2Container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bloque2Left {
+    height: auto;
+    // background-color: purple;
+    padding: v.$separator_movil;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    row-gap: 3rem;
+    .bloque2LeftTitle, .bloque2LeftDescription {
+        width: 25rem;
+    }
+    .bloque2LeftTitle {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+        justify-items: center;
+        align-items: center;
+        h3 {
+            margin: 0;
+            color: black;
+            font-weight: 500;
+            text-align: center;
+            font-size: v.$phone_title_size;
+            width: 23rem;
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.bloque2LeftDescription {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    row-gap: 2rem;
+    width: 18rem !important;
+    .bloque2LeftItem {
+        display: flex;
+        column-gap: 1rem;
+        img {
+            width: auto;
+            height: 3rem;
+        }
+        .bloque2LeftItemDesc {
+            display: flex;
+            flex-direction: column;
+            row-gap: .3rem;
+            h3, h2 {
+                margin: 0;
+                color: black;
+                font-weight: 500;
+            }
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+.bloque2Right {
+    padding: v.$separator_movil;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    position: relative;
+    .bloque2LeftSeparator {
+        position: absolute;
+        width: 100%;
+        height: 2rem;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bloque2LeftSeparatorLine {
+            width: 25rem;
+            height: 100%;
+            border-bottom: 2px solid black;
+        }
+    }
+    .bloque2RightTitle, .bloque2Form {
+        width: 25rem;
+    }
+    .bloque2RightTitle {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+        justify-items: center;
+        align-items: center;
+        h3, h4 {
+            margin: 0;
+            color: black;
+            font-weight: 500;
+            text-align: center;
+        }
+        h3 {
+            font-size: v.$phone_title_size;
+            width: 15rem;
+            span {
+                font-weight: 800;
+            }
+        }
+        h4 {
+            font-size: v.$phone_sub_size;
+        }
+    }
+}
+
+.bloque2Form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    input {
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid black;
+        outline: none;
+        background-color: transparent;
+        padding-left: 1rem;
+        &::placeholder {
+            color: black;
+        }
+    }
+    .bloque2InputDouble {
+        height: 3rem;
+        display: flex;
+        column-gap: 1rem;
+        input {
+            width: 100%;
+        }
+    }
+    .bloque2Terminos {
+        display: flex;
+        column-gap: .5rem;
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+    .bloque2Button {
+        // background-color: purple;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            width: 13rem;
+            background-color: black;
+            border-radius: 1rem;
+            border: none;
+            h3 {
+                color: white;
+                padding: 1rem 0;
+                margin: 0;
+                font-size: 1.8rem;
+            }
+        }
+    }
 }

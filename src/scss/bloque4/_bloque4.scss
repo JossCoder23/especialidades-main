@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque4 {
+    height: auto;
+    background-color: salmon;
+    padding: v.$separator_movil;
+}
+
+.bloque4Left {
+    
+}
+
+.bloque4LeftTop {
+    display: flex;
+    flex-direction: column;
+    .bloque4LeftTopTitle {
+        
+    }
+}
