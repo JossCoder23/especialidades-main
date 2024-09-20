@@ -1,0 +1,69 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque6 {
+    height: auto;
+    background-color: v.$cuarto;
+    padding: v.$separator_movil;
+}
+
+.bloque6Left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    .bloque6Title {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        h3 {
+            font-size: v.$phone_title_size;
+            width: 21rem;
+            margin: 0;
+            color: black;
+            font-weight: 400;
+            text-align: center;
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.bloque6Tutor {
+    // background-color: green;
+    width: 25rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    img {
+        width: 15rem;
+    }
+    h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .bloque6TutorTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: .5rem;
+        h3, h4 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+        h4 {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+    }
+}
