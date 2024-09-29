@@ -13,10 +13,20 @@
     align-items: center;
     justify-items: center;
     row-gap: 2rem;
+    @include m.desktop_1020 {
+        width: 50%;
+        padding-left: 6rem;
+        row-gap: 4rem;
+    }
 }
 
 .bloque4LeftTop {
-    
+    @include m.desktop_1020 {
+        width: 100%;
+        row-gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .bloque4LeftBottom {
@@ -24,12 +34,22 @@
     align-items: center;
     flex-direction: column;
     row-gap: 1.5rem;
+    @include m.desktop_1120 {
+        width: 100%;
+    }
     h3 {
         margin: 0;
         font-weight: 500;
         text-align: center;
         font-size: v.$phone_title_size;
         width: 25rem;
+        @include m.desktop_1020 {
+            width: 100%;
+            // padding-left: 6rem;
+        }
+        @include m.desktop_1120 {
+            text-align: start;
+        }
         span {
             font-weight: 800;
         }
@@ -37,6 +57,11 @@
 }
 
 .bloque4LeftBottomButton {
+    @include m.desktop_1020 {
+        display: flex;
+        justify-items: flex-start;
+        width: 100%;
+    }
     button {
         background-color: black;
         display: flex;
@@ -60,6 +85,9 @@
             height: 100%;
             align-items: center;
             justify-items: center;
+            @include m.desktop_1020 {
+                padding: 0;
+            }
         }
     }
 }
@@ -78,10 +106,17 @@
         font-weight: 400;
         text-align: center;
         width: 25rem;
+        @include m.desktop_1020 {
+            width: 100%;
+            text-align: start;
+        }
     }
     h3 {
         font-size: v.$phone_title_size;
         width: 21rem;
+        @include m.desktop_1020 {
+            width: 100%;
+        }
         span {
             font-weight: 800;
         }
@@ -109,6 +144,9 @@
     justify-items: center;
     border-bottom: 2px solid black;
     overflow: hidden;
+    @include m.desktop_1020 {
+        width: 100%;
+    }
 }
 
 .LeftBottomItemTop {
@@ -122,6 +160,10 @@
         padding: 1.5rem 0; //aumentar espacio
         font-weight: 600;
         font-size: 1.8rem;
+        @include m.desktop_1020 {
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
     }
     img {
         height: 1.2rem;
@@ -149,6 +191,12 @@
         &:nth-child(odd) {
             background-color: #bcbbbb;
         }
+        @include m.desktop_1020 {
+            font-size: 1.5rem;
+        }
+        @include m.desktop_1120{
+            padding: 1.5rem 0;
+        }
     }
     h4 {
         margin: 0;
@@ -156,6 +204,9 @@
         font-weight: 700;
         color: black;
         font-size: 1.5rem;
+        @include m.desktop_1020 {
+            font-size: 2rem;
+        }
     }
 }
 

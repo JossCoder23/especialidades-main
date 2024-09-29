@@ -15,6 +15,13 @@
     top: 0;
 }
 
+.bloque7Container {
+    @include m.desktop_1020 {
+        width: 50%;
+        padding-left: 6rem;
+    }
+}
+
 .bloque7Left {
     display: flex;
     flex-direction: column;
@@ -23,6 +30,9 @@
     z-index: 5;
     position: relative;
     row-gap: 3rem;
+    @include m.desktop_1020 {
+        align-items: flex-start;
+    }
     .bloque7Title {
         display: flex;
         flex-direction: column;
@@ -38,6 +48,10 @@
             span {
                 font-weight: 800;
             }
+            @include m.desktop_1020 {
+                width: 100%;
+                font-size: calc(v.$phone_title_size + .4rem);
+            }
         }
         h4 {
             font-size: v.$phone_sub_size;
@@ -49,6 +63,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    @include m.desktop_1020 {
+        width: 100%;
+        row-gap: 2.5rem;
+    }
 }
 
 .bloque7Button {
@@ -56,7 +74,9 @@
     // background-color: red;
     position: relative;
     z-index: 5;
-    
+    @include m.desktop_1020 {
+        display: none;
+    }
     button {
         background-color: black;
         height: 4rem;
@@ -76,6 +96,9 @@
     display: flex;
     column-gap: 1rem;
     width: 23rem;
+    @include m.desktop_1020 {
+        width: 100%;
+    }
     img {
         height: 4rem;
         width: auto;
@@ -91,6 +114,9 @@
             color: white;
             font-weight: 500;
             font-size: 1.3rem;
+            @include m.desktop_1020 {
+                font-size: 1.7rem;
+            }
         }
         h4, h3 {
             font-weight: 800;

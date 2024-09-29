@@ -15,6 +15,19 @@
     top: 0;
     left: 0;
     z-index: 1;
+    @include m.desktop_1020 {
+        display: none;
+    }
+}
+
+.bloque3ImageDesktop {
+    display: none;
+    @include m.desktop_1020 {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
 }
 
 .bloque3Container {
@@ -30,8 +43,12 @@
     justify-items: center;
     align-items: center;
     row-gap: 3rem;
-    .bloque3LeftTitle {
-        width: 25rem;
+    @include m.desktop_1020 {
+        width: 50%;
+        
+    }
+    @include m.desktop_1120 {
+        padding-left: 6rem;
     }
     .bloque3LeftTitle {
         display: flex;
@@ -41,6 +58,14 @@
         align-items: center;
         position: relative;
         z-index: 3;
+        width: 25rem;
+        @include m.desktop_1020 {
+            width: 38rem;
+        }
+        @include m.desktop_1120 {
+            width: 100%;
+            align-items: flex-start;
+        }
         h3, h4 {
             margin: 0;
             color: white;
@@ -50,12 +75,21 @@
         h3 {
             font-size: v.$phone_title_size;
             width: 21rem;
+            @include m.desktop_1020 {
+                font-size: calc(v.$phone_title_size + .3rem);
+                text-align: left;
+                width: 38rem;
+            }
             span {
                 font-weight: 800;
             }
         }
         h4 {
             font-size: v.$phone_sub_size;
+            @include m.desktop_1020 {
+                font-size: calc(v.$phone_sub_size + .2rem);
+                text-align: left;
+            }
         }
     }
 }
@@ -66,8 +100,8 @@
     overflow: hidden;
     width: 100%;
     padding-bottom: 6rem;
-    @include m.tablet_768 {
-      display: none;
+    @include m.desktop_1020 {
+        width: 100%;
     }
 }
 
@@ -80,14 +114,20 @@
     }
     @include m.desktop_1000 {
         overflow: hidden;
+        // width: 50%;
     }
     @include m.desktop_1020 {
         // max-width: v.$max-width-1020;
-        max-width: 95rem;
+        max-width: 37rem;
         display: grid !important;
-        grid-template-columns: repeat(4, 1fr);
-        height: 40rem;
+        // grid-template-columns: repeat(4, 1fr);
+        // height: 28rem;
+        height: auto;
         width: 90rem;
+        // background-color: red;
+    }
+    @include m.desktop_1120 {
+        max-width: 100%;
     }
 }
   
@@ -97,14 +137,10 @@
     height: auto;
     @include m.desktop_1020 {
         overflow: visible !important;
-        padding-top: 1rem;
         height: 100%;
         position: absolute;
-        // margin-top: 6rem;
-        // background-color: purple;
         width: 100%;
-        // display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // background-color: green;
     }
     @include m.desktop_1220 {
         padding-top: 3rem;
@@ -130,6 +166,11 @@
         padding-bottom: 0;
         // margin-top: 4rem !important;
         overflow: visible !important;
+        // width: 36.5% !important;
+        // background-color: purple;
+    }
+    @include m.desktop_1020 {
+        justify-items: flex-start;
     }
 }
   
@@ -146,6 +187,12 @@
     justify-items: center;
     align-items: center;
     row-gap: 2rem;
+    @include m.desktop_1020 {
+        flex-direction: row;
+        column-gap: 3rem;
+        align-items: flex-start;
+        width: auto;
+    }
     img {
         width: 13rem;
     }
@@ -155,17 +202,29 @@
         color: white;
         font-weight: 400;
         font-size: 1.2rem;
+        @include m.desktop_1020 {
+            font-size: 1.4rem;
+            padding-top: 2rem;
+            border-top: 1px solid white;
+            text-align: left;
+            width: 30rem;
+        }
     }
 }
 
 .swiper-arrows2 {
     // background-color: orange;
     position: absolute;
-    // background-color: orange;
     width: 100%;
     text-align: center;
     bottom: 0;
     height: auto;
+    @include m.desktop_1020 {
+        bottom: 2rem;
+    }
+    @include m.desktop_1120 {
+        width: 62%;
+    }
     h3 {
         margin: 0;
         font-size: 4rem;
@@ -187,6 +246,13 @@
     position: absolute !important;
     bottom: .5rem;
     right: 40%;
+    @include m.desktop_1020 {
+        bottom: 2.5rem;
+        right: 44%;
+    }
+    @include m.desktop_1120 {
+        right: 64%;
+    }
     img {
         width: 1.3rem;
     }
@@ -204,6 +270,13 @@
     z-index: 30;
     bottom: .5rem;
     left: 40%;
+    @include m.desktop_1020 {
+        bottom: 2.5rem;
+        left: 44%;
+    }
+    @include m.desktop_1120 {
+        left: 26%;
+    }
     img {
         width: 1.3rem;
     }
