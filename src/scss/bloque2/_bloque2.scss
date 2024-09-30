@@ -132,11 +132,18 @@
         z-index: 100;
         right: 5%;
         // top: 3%;
-        border: .5px solid black;
+        // border: .5px solid black;
         border-bottom-right-radius: 1.5rem;
         border-top-left-radius: 1.5rem;
         padding: 3rem 0;
         top: calc(100vh - 91%);
+        box-shadow: -1px -2px 15px 2px rgba(0,0,0,0.1);
+        -webkit-box-shadow: -1px -2px 15px 2px rgba(0,0,0,0.1);
+        -moz-box-shadow: -1px -2px 15px 2px rgba(0,0,0,0.1);
+    }
+    @include m.desktop_1280 {
+        width: 40rem;
+        top: calc(100vh - 89%);
     }
     .bloque1LeftLogoDesktop {
         display: none;
@@ -164,6 +171,9 @@
     }
     .bloque2RightTitle, .bloque2Form {
         width: 25rem;
+        @include m.desktop_1280 {
+            width: 30rem;
+        }
     }
     .bloque2RightTitle {
         display: flex;
@@ -204,6 +214,12 @@
         &::placeholder {
             color: black;
         }
+        @include m.desktop_1200 {
+            height: 4rem;
+            &::placeholder {
+                font-size: 1.5rem;
+            } 
+        }
     }
     .bloque2InputDouble {
         height: 3rem;
@@ -211,6 +227,9 @@
         column-gap: 1rem;
         input {
             width: 100%;
+        }
+        @include m.desktop_1200 {
+            height: 4rem;
         }
     }
     .bloque2Terminos {
@@ -221,6 +240,9 @@
             align-items: center;
             font-size: 1rem;
             font-weight: 700;
+            @include m.desktop_1200 {
+                font-size: 1.3rem;
+            }
         }
     }
     .bloque2Button {
@@ -233,11 +255,17 @@
             background-color: black;
             border-radius: 1rem;
             border: none;
+            @include m.desktop_1200 {
+                width: 15rem;
+            }
             h3 {
                 color: white;
                 padding: 1rem 0;
                 margin: 0;
                 font-size: 1.8rem;
+                @include m.desktop_1200 {
+                    padding: 1.3rem 0;
+                }
             }
         }
     }

@@ -6,6 +6,9 @@
     background-color: v.$quinto;
     position: relative;
     padding: v.$separator_movil;
+    @include m.desktop_1020 {
+        overflow: hidden;
+    }
 }
 
 .bloque7Back {
@@ -13,6 +16,21 @@
     width: 100%;
     height: 100% !important;
     top: 0;
+    @include m.desktop_1020 {
+        display: none;
+    }
+}
+
+.bloque7BackDesktop {
+    display: none;
+    @include m.desktop_1020 {
+        display: block;
+        position: absolute;
+        width: 150rem;
+        height: auto;
+        top: 0;
+        right: 0;
+    }
 }
 
 .bloque7Container {

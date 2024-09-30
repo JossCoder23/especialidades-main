@@ -5,6 +5,20 @@
     height: auto;
     background-color: v.$cuarto;
     padding: v.$separator_movil;
+    position: relative;
+    overflow: hidden;
+    z-index: 30;
+    .bloque6ImageDesktop {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+            position: absolute;
+            width:58.9rem;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
 }
 
 .bloque6Container {
@@ -38,6 +52,8 @@
             color: black;
             font-weight: 400;
             text-align: center;
+            z-index: 20;
+            position: relative;
             @include m.desktop_1020 {
                 width: 100%;
                 text-align: left;
@@ -76,6 +92,8 @@
         @include m.desktop_1020 {
             text-align: start;
             font-size: 1.6rem;
+            position: relative;
+            z-index: 10;
         }
     }
     .bloque6TutorTitle {

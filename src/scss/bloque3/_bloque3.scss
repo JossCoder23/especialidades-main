@@ -45,7 +45,6 @@
     row-gap: 3rem;
     @include m.desktop_1020 {
         width: 50%;
-        
     }
     @include m.desktop_1120 {
         padding-left: 6rem;
@@ -102,6 +101,10 @@
     padding-bottom: 6rem;
     @include m.desktop_1020 {
         width: 100%;
+        padding-left: 6rem;
+    }
+    @include m.desktop_1200 {
+        padding-left: 0;
     }
 }
 
@@ -118,7 +121,7 @@
     }
     @include m.desktop_1020 {
         // max-width: v.$max-width-1020;
-        max-width: 37rem;
+        max-width: 50rem;
         display: grid !important;
         // grid-template-columns: repeat(4, 1fr);
         // height: 28rem;
@@ -221,6 +224,7 @@
     height: auto;
     @include m.desktop_1020 {
         bottom: 2rem;
+        width: 76%;
     }
     @include m.desktop_1120 {
         width: 62%;
