@@ -13,6 +13,17 @@
         position: absolute;
         background-size: contain;
     }
+    .bloque1ImageMovil {
+        @include m.desktop_1020 {
+            display: none;
+        }
+    }
+    .bloque1ImageDesktop {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+        }
+    }
 }
 
 .bloque1Left {
