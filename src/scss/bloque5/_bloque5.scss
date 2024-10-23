@@ -37,7 +37,8 @@
             text-align: center;
             @include m.desktop_1020 {
                 width: 100%;
-                font-size: calc(v.$phone_title_size + .3rem);
+                font-size: v.$desktop_title_size;
+                text-align: left;
             }
             span {
                 font-weight: 800;

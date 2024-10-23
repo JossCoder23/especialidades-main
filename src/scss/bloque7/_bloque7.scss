@@ -26,7 +26,7 @@
     @include m.desktop_1020 {
         display: block;
         position: absolute;
-        width: 150rem;
+        width: 120%;
         height: auto;
         top: 0;
         right: 0;
@@ -68,7 +68,8 @@
             }
             @include m.desktop_1020 {
                 width: 100%;
-                font-size: calc(v.$phone_title_size + .4rem);
+                font-size: v.$desktop_title_size;
+                text-align: left;
             }
         }
         h4 {

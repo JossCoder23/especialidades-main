@@ -45,6 +45,8 @@
         width: 25rem;
         @include m.desktop_1020 {
             width: 100%;
+            font-size: v.$desktop_title_size;
+            text-align: left;
             // padding-left: 6rem;
         }
         @include m.desktop_1120 {
@@ -116,6 +118,7 @@
         width: 21rem;
         @include m.desktop_1020 {
             width: 100%;
+            font-size: v.$desktop_title_size;
         }
         span {
             font-weight: 800;
@@ -206,7 +209,7 @@
         color: black;
         font-size: 1.5rem;
         @include m.desktop_1020 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
     }
 }

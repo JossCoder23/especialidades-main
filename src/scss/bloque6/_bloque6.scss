@@ -13,11 +13,29 @@
         @include m.desktop_1020 {
             display: block;
             position: absolute;
-            width:58.9rem;
+            width: 39.2%;
             right: 0;
             bottom: 0;
             z-index: 1;
         }
+        // @include m.desktop_1040 {
+        //     width: 40.8rem;    
+        // }
+        // @include m.desktop_1060 {
+        //     width: 41.5rem;    
+        // }
+        // @include m.desktop_1080 {
+        //     width: 42.3rem;
+        // }
+        // @include m.desktop_1100 {
+        //     width: 43rem;
+        // }
+        @include m.desktop_1120 {
+            // width: 39.15%;
+        }
+        // @include m.desktop_1200 {
+        //     width:49.9rem;
+        // }
     }
 }
 
@@ -57,7 +75,7 @@
             @include m.desktop_1020 {
                 width: 100%;
                 text-align: left;
-                font-size: calc(v.$phone_title_size + .4rem);
+                font-size: v.$desktop_title_size;
             }
             span {
                 font-weight: 800;
