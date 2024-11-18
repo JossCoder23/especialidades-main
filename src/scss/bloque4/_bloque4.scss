@@ -102,6 +102,7 @@
     align-items: center;
     position: relative;
     z-index: 3;
+    
     h3, h4 {
         margin: 0;
         color: black;
@@ -111,14 +112,17 @@
         @include m.desktop_1020 {
             width: 100%;
             text-align: start;
+            
         }
     }
     h3 {
         font-size: v.$phone_title_size;
         width: 21rem;
+        
         @include m.desktop_1020 {
             width: 100%;
             font-size: v.$desktop_title_size;
+            
         }
         span {
             font-weight: 800;

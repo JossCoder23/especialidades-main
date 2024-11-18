@@ -24,7 +24,36 @@ html(lang="es")
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+    
+    
     body
+        .bloqueFloat(onclick="topScroll()")
+            h3 Más información
+        .bloqueFloat2(onclick="topScroll2()")
+            h3 Más información
+        script.
+            function topScroll(){
+                if( screen.width >= 319 ) {
+                    window.scrollTo(0, 600)
+                } 
+                if ( screen.width >= 359 ) {
+                    window.scrollTo(0, 750)
+                } 
+            }
+            function topScroll2(){
+                if( screen.width >= 1019 ) {
+                    window.scrollTo(0, 30)
+                } 
+            }
+
+
+
+
+
+
+
+
+
         .bloque1 
             //- img.bloque1ImageMovil(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/esp_est_movil_top.webp", alt="")
             //- img.bloque1ImageDesktop(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/esp_est_desktop-scaled.webp", alt="")
@@ -306,8 +335,8 @@ html(lang="es")
                             .bloque7ItemText
                                 h4 Inicio de actividades: 
                                 h5 1 de diciembre del 2024
-                    .bloque7Button
-                        button
+                        //-.bloque7Button
+                        //-button
                             h3 Más información
                 .bloque7Right
         footer

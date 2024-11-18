@@ -6,8 +6,9 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/banner-enfer-cent-especi.webp');
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/LP_Periodoncia-e-implantologia-portada.webp');
     background-size: cover;
+   
     background-position: center;
     background-repeat: none;
     img {
@@ -18,16 +19,20 @@
         background-size: contain;
         background-position: center;
         background-attachment: fixed;
+        
     }
     .bloque1ImageMovil {
         @include m.desktop_1020 {
             display: none;
+            //background-size: cover;
         }
     }
     .bloque1ImageDesktop {
         display: none;
         @include m.desktop_1020 {
             display: block;
+            //background-size: cover;
+
         }
     }
 }

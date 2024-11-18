@@ -69,3 +69,50 @@ window.addEventListener("load", () => {
 })
 
 
+let btonFlotante = document.querySelector('.bloqueFloat');
+let btonFlotante2 = document.querySelector('.bloqueFloat2');
+
+
+window.addEventListener('scroll', (e) => {
+
+    // console.log(window.scrollY) 
+    if( screen.width >= 319 ) {
+        if( window.scrollY > 150 ) {
+            btonFlotante.classList.add('bloqueFloatActive');
+        }else {
+            btonFlotante.classList.remove('bloqueFloatActive');
+        }
+    }
+    if( screen.width >= 320 ) { 
+        if( window.scrollY > 1199 && window.scrollY < 4050 ) {
+            btonFlotante.classList.add('bloqueFloatActive2');
+        }else {
+            btonFlotante.classList.remove('bloqueFloatActive2');
+        }
+    }
+    if( screen.width >= 390 ) {
+        if( window.scrollY > 1199 && window.scrollY < 4150 ) {
+            btonFlotante.classList.add('bloqueFloatActive2');
+        }else {
+            btonFlotante.classList.remove('bloqueFloatActive2');
+        }
+    }
+    if( screen.width >= 1019 ) {
+        if( window.scrollY > 550 && window.scrollY < 3900 ) {
+            btonFlotante2.classList.add('bloqueFloatActive2');
+        }else {
+            btonFlotante2.classList.remove('bloqueFloatActive2');
+        }
+    }
+    if( screen.width >= 1019 ) {
+        if( window.scrollY > 550 && window.scrollY < 4150 ) {
+            btonFlotante2.classList.add('bloqueFloatActive2');
+        }else {
+            btonFlotante2.classList.remove('bloqueFloatActive2');
+        }
+    }
+})
+ 
+
+
+
